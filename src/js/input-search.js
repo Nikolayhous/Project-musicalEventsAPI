@@ -50,6 +50,7 @@ paginationNone();
      setTimeout(() => {
       createEventsAfterClick()
     }, 2000);
+    refs.pagination.classList.remove('tui-pagination--none');
     
     }
 
