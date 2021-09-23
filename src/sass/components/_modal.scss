@@ -1,17 +1,16 @@
 .modal__backdrop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    background-color: rgba(32, 13, 29, 0.6);
-    backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(32, 13, 29, 0.6);
+  backdrop-filter: blur(3px);
 }
-
 
 .modal {
   position: absolute;
@@ -24,9 +23,8 @@
   background-color: var(--modal-background-color);
   padding-bottom: 50px;
   animation: open 0.8s linear;
-  transition-timing-function: cubic-bezier(.14,1.02,.91,.04);
+  transition-timing-function: cubic-bezier(0.14, 1.02, 0.91, 0.04);
   transition-duration: 250ms;
-  
 
   @include for-size(tablet-up) {
     width: 595px;
@@ -38,38 +36,38 @@
     height: 700px;
     border-radius: 300px 0;
   }
-}
 
-@keyframes open {
-  0% {
+  @keyframes open {
+    0% {
       transform: translateX(50%) translateY(50%);
       opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
+}
+
+.is-hidden {
+  transition-timing-function: cubic-bezier(0.14, 1.02, 0.91, 0.04);
+  transition-duration: 250ms;
+  opacity: inherit;
+}
+
+@keyframes is-hidden {
   100% {
+    transform: translateX(50%) translateY(50%);
     opacity: 1;
   }
+  50% {
+    opacity: 0.5;
   }
-
-  .is-hidden {
-    transition-timing-function: cubic-bezier(.14,1.02,.91,.04);
-    transition-duration: 250ms;
-    opacity: inherit;
+  0% {
+    opacity: 0;
   }
+}
 
-  @keyframes is-hidden {
-    100% {
-        transform: translateX(50%) translateY(50%);
-        opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    0% {
-      opacity: 0;
-    }
-    }
-
- // кнопка закрытия
+// кнопка закрытия
 
 .modal__close {
   padding: 0;
@@ -86,13 +84,12 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
-  
+
   @include for-size(desktop-up) {
     top: 30px;
     right: 30px;
     width: 50px;
     height: 50px;
-    
   }
 }
 
@@ -102,7 +99,7 @@
   text-align: center;
   cursor: pointer;
   fill: var(--modal-accent-color);
-    
+
   @include for-size(desktop-up) {
     width: 25px;
     height: 25px;
@@ -127,19 +124,18 @@
   display: block;
   margin: 45px auto 10px;
 
-  @include for-size(desktop-up){
+  @include for-size(desktop-up) {
     width: 102px;
     height: 102px;
     margin: 52px auto 31px;
   }
-  
 }
 
 .modal__circle {
-    border-radius: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
+  border-radius: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 // грид модалки
@@ -153,14 +149,14 @@
 
 // описание
 
-.modal__poster-container{
-  @include for-size(tablet-up){
+.modal__poster-container {
+  @include for-size(tablet-up) {
     margin-left: 30px;
     width: 240px;
     height: 300px;
   }
 
-  @include for-size(desktop-up){
+  @include for-size(desktop-up) {
     width: 260px;
     height: 400px;
   }
@@ -177,24 +173,22 @@
     min-height: 100%;
     object-fit: cover;
   }
-  
+
   @include for-size(desktop-up) {
-     min-width: 260px;
-     min-height: 100%;
+    min-width: 260px;
+    min-height: 100%;
     object-fit: cover;
-    
   }
 }
 
-.modal__list{
-    width: 243px;
-    display: block;
+.modal__list {
+  width: 243px;
+  display: block;
 
-    @include for-size(desktop-up) {
-      width: 300px;
-    }
+  @include for-size(desktop-up) {
+    width: 300px;
+  }
 }
-
 
 .modal__info {
   margin: 0;
@@ -206,7 +200,7 @@
   }
 }
 
-.modal__item:not(:last-child){
+.modal__item:not(:last-child) {
   margin-bottom: 7px;
 }
 
@@ -246,12 +240,12 @@
   height: 35px;
   overflow-y: scroll;
 
-  @include for-size(tablet-up){
+  @include for-size(tablet-up) {
     width: 265px;
     height: 45px;
   }
- 
-  @include for-size(desktop-up){
+
+  @include for-size(desktop-up) {
     width: 380px;
     height: 50px;
   }
@@ -262,8 +256,8 @@
   width: 243px;
   height: 15px;
   overflow-y: scroll;
- 
-  @include for-size(desktop-up){
+
+  @include for-size(desktop-up) {
     width: 380px;
     height: 18px;
   }
@@ -285,7 +279,6 @@
 
 .modal__price {
   margin-bottom: 10px;
-  
 }
 
 .modal__tickets {
@@ -305,7 +298,7 @@
   height: 12px;
   margin-right: 13px;
 
-  @include for-size(desktop-up){
+  @include for-size(desktop-up) {
     width: 24px;
     height: 17px;
   }
@@ -320,7 +313,7 @@
   margin-bottom: 10px;
   justify-content: center;
 
-  @include for-size(tablet-up){
+  @include for-size(tablet-up) {
     justify-content: start;
   }
 }
@@ -363,7 +356,7 @@
 
 // кнопка "MORE FROM THIS AUTHOR"
 
-.modal__container{
+.modal__container {
   position: absolute;
   display: inline-flex;
   bottom: 60px;
@@ -387,11 +380,10 @@
   background-color: var(--modal-background-color);
   border: 1px solid var(--modal-accent-color);
   border-radius: 5px;
-  
-  
+
   @include for-size(tablet-up) {
     padding: 10px 15px 10px 16px;
-    border-color:var(--modal-accent-color);
+    border-color: var(--modal-accent-color);
   }
 
   @include for-size(desktop-up) {
@@ -405,14 +397,14 @@
   line-height: 1.25;
   color: var(--modal-accent-color);
 
-  @include for-size(tablet-up){
-  font-size: 14px;
+  @include for-size(tablet-up) {
+    font-size: 14px;
   }
 
-  @include for-size(desktop-up){
+  @include for-size(desktop-up) {
     font-weight: 600;
     font-size: 16px;
-    }
+  }
 }
 
 .modal__more:focus,
