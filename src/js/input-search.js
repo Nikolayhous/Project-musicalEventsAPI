@@ -29,7 +29,7 @@ paginationNone();
       return  creatGalleryCards(data._embedded.events);
 
     } if (keyword.length === 1) {
-        return error({
+         error({
           text: 'Please. Enter the correct data to search for music events.',
           delay: 2000,
         });
