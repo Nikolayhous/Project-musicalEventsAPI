@@ -42,6 +42,10 @@
   text-decoration: none;
   vertical-align: middle;
   border-width: 1px 0;
+
+  &:hover {
+    color: var(--title-color);
+  }
 }
 
 .tui-pagination .tui-page-btn:hover {
