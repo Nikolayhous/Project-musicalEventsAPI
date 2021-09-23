@@ -54,4 +54,4 @@ const e={body:document.querySelector("body"),switch:document.querySelector(".js-
 },{"./refs.js":"VyiV"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/renderGalleryCards"),require("./js/onClickScrollTo"),require("./js/modal-close"),require("./js/preloader"),require("./js/input-search"),require("./js/pagination"),require("./js/variables"),require("./js/renderModalInfo"),require("./js/markupCountryList"),require("./js/select"),require("./js/switch"),require("./js/team-modal"),require("./js/clear-btn");
 },{"./sass/main.scss":"clu1","./js/renderGalleryCards":"cntR","./js/onClickScrollTo":"qg96","./js/modal-close":"fdXB","./js/preloader":"BeZ8","./js/input-search":"zCmT","./js/pagination":"o8lo","./js/variables":"u9EY","./js/renderModalInfo":"MRW2","./js/markupCountryList":"mji8","./js/select":"QLxl","./js/switch":"dF6L","./js/team-modal":"SVxB","./js/clear-btn":"GbeR"}]},{},["Focm"], null)
-//# sourceMappingURL=/Project-musicalEventsAPI/src.5dbd927d.js.map
+//# sourceMappingURL=/Project-musicalEventsAPI/src.ab44345e.js.map
