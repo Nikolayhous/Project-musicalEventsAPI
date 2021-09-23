@@ -28,19 +28,6 @@ export function setPagination(totalEvents) {
     centerAlign: true,
   };
 
-  //   if (totalEvents <= 20) {
-  //   options.visiblePages = 1;
-  // }
-  //     if (totalEvents <= 40) {
-  //   options.visiblePages = 2;
-  // }
-  //     if (totalEvents <= 60) {
-  //   options.visiblePages = 3;
-  // }
-  //     if (totalEvents <= 80) {
-  //   options.visiblePages = 4;
-  // }
-
   const pagination = new Pagination('pagination', options);
 
   pagination.on('beforeMove', function (eventData) {
@@ -66,13 +53,6 @@ function PageToTop() {
 }
 function setEventsOnPage() {
   PageToTop();
-  // const windowOuterWidth = window.outerWidth;
-
-  // if (windowOuterWidth > 768 && windowOuterWidth < 1280) {
-  //   apiService.size = 21;
-  // } else {
-  //   apiService.size = 20;
-  // }
 }
 
 function renderGallery(inputText = '', newPage = 0) {
@@ -92,19 +72,6 @@ newApi(inputText, newPage, 20, '').then(data => {
   document
     .querySelectorAll('.events__item')
     .forEach(event => event.addEventListener('click', openModal));
-
-
-
-  
-  //   const event = data._embedded.events.map(evt => ({
-  //   ...evt,
-  //   imgUrl: evt.images.find(img => img.width === 1024 && img.height === 683),
-  //   locationRef: evt._embedded.venues,
-  // })
-  // )
-  // console.log(event);
-  // ;
-
   });
 }
 export default setPagination;
